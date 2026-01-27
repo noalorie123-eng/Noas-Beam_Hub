@@ -46,8 +46,8 @@ header p {
 .container {
     padding: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .mod {
@@ -102,60 +102,35 @@ footer {
     font-size: 13px;
     opacity: 0.6;
 }
-
-/* Suchfunktion */
-.hidden { display: none; }
 </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Noas Beam Hub</h1>
-    <p>BeamNG.drive Mods – Neon • Fast Downloads</p>
-    <input type="text" id="search" placeholder="Search Mods..." onkeyup="searchMods()">
+<h1>Noas Beam Hub</h1>
+<p>BeamNG.drive Mods – Mega Collection</p>
+<input type="text" id="search" placeholder="Search Mods..." onkeyup="searchMods()">
 </header>
 
 <div class="container" id="mods-container">
 
-<!-- Mod 1 -->
-<div class="mod">
-    <img src="https://via.placeholder.com/500x260">
-    <div class="mod-content">
-        <h2>BMW M4 G82</h2>
-        <p>High quality visuals, realistic handling</p>
-        <a class="btn" href="#" target="_blank">⬇ Download</a>
-    </div>
-</div>
-
-<!-- Mod 2 -->
-<div class="mod">
-    <img src="https://via.placeholder.com/500x260">
-    <div class="mod-content">
-        <h2>Nissan GT-R R35</h2>
-        <p>Drift & race setup included</p>
-        <a class="btn" href="#" target="_blank">⬇ Download</a>
-    </div>
-</div>
-
-<!-- Mod 3 -->
-<div class="mod">
-    <img src="https://via.placeholder.com/500x260">
-    <div class="mod-content">
-        <h2>Ford Mustang GT</h2>
-        <p>Classic muscle car mod</p>
-        <a class="btn" href="#" target="_blank">⬇ Download</a>
-    </div>
-</div>
-
-</div>
-
-<footer>
-© 2026 Noas Beam Hub • Fan Made
-</footer>
-
+<!-- Mega Mod-Grid 100+ -->
 <script>
-// Suchfunktion für Mods
+let container = document.getElementById('mods-container');
+for (let i=1; i<=100; i++) {
+    container.innerHTML += `
+    <div class="mod">
+        <img src="https://via.placeholder.com/500x260?text=Mod+${i}">
+        <div class="mod-content">
+            <h2>Mod Car ${i}</h2>
+            <p>Description for Mod ${i}</p>
+            <a class="btn" href="#" target="_blank">⬇ Download</a>
+        </div>
+    </div>
+    `;
+}
+
+// Suchfunktion
 function searchMods() {
     let input = document.getElementById('search').value.toLowerCase();
     let mods = document.getElementById('mods-container').getElementsByClassName('mod');
@@ -171,6 +146,13 @@ function searchMods() {
 }
 </script>
 
+</div>
+
+<footer>
+© 2026 Noas Beam Hub • Fan Made
+</footer>
+
 </body>
 </html>
+
 
