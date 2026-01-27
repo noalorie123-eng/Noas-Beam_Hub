@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Noas Beam Hub</title>
+<title>Noas Beam Hub Mega Mods</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -11,7 +11,7 @@
 body {
     margin: 0;
     font-family: 'Orbitron', sans-serif;
-    background: radial-gradient(circle at top, #2b0033, #0b0010);
+    background: radial-gradient(circle at top, #1a001a, #330033);
     color: white;
 }
 
@@ -46,7 +46,7 @@ header p {
 .container {
     padding: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
@@ -66,30 +66,34 @@ header p {
 .mod img {
     width: 100%;
     display: block;
+    margin-bottom: 10px;
 }
 
 .mod-content {
-    padding: 20px;
+    padding: 15px;
 }
 
 .mod h2 {
     margin: 0 0 10px;
+    font-size: 18px;
 }
 
 .mod p {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.8;
+    margin: 5px 0;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
+    margin-top: 10px;
+    padding: 10px 20px;
     border-radius: 30px;
     background: linear-gradient(90deg, #ff2fa0, #ff5fd2);
     color: black;
     text-decoration: none;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .btn:hover {
@@ -104,37 +108,40 @@ footer {
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Noas Beam Hub</h1>
-<p>BeamNG.drive Mods – Mega Collection</p>
+<h1>Noas Beam Hub Mega Mods</h1>
+<p>100 Autos – 5 Bilder pro Auto – Platzhalter für deine Inhalte</p>
 <input type="text" id="search" placeholder="Search Mods..." onkeyup="searchMods()">
 </header>
 
-<div class="container" id="mods-container">
+<div class="container" id="mods-container"></div>
 
-<!-- Mega Mod-Grid 100+ -->
+<footer>
+© 2026 Noas Beam Hub • Fan Made
+</footer>
+
 <script>
+// Generiere 100 Autos, 5 Bilder pro Auto
 let container = document.getElementById('mods-container');
-for (let i=1; i<=100; i++) {
-    container.innerHTML += `
-    <div class="mod">
-        <img src="https://via.placeholder.com/500x260?text=Mod+${i}">
-        <div class="mod-content">
-            <h2>Mod Car ${i}</h2>
-            <p>Description for Mod ${i}</p>
-            <a class="btn" href="#" target="_blank">⬇ Download</a>
-        </div>
-    </div>
-    `;
+for (let i = 1; i <= 100; i++) {
+    let modHTML = `<div class="mod">`;
+    modHTML += `<h2>Auto ${i}</h2>`;
+    for (let j = 1; j <= 5; j++) {
+        modHTML += `<img src="https://via.placeholder.com/400x200?text=Auto+${i}+Bild+${j}" alt="Auto ${i} Bild ${j}">`;
+        modHTML += `<p>Beschreibung ${j} für Auto ${i} – ersetze diesen Text</p>`;
+        modHTML += `<a class="btn" href="#" target="_blank">⬇ Download ${j}</a>`;
+    }
+    modHTML += `</div>`;
+    container.innerHTML += modHTML;
 }
 
 // Suchfunktion
 function searchMods() {
     let input = document.getElementById('search').value.toLowerCase();
     let mods = document.getElementById('mods-container').getElementsByClassName('mod');
-
     for (let i = 0; i < mods.length; i++) {
         let title = mods[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
         if (title.includes(input)) {
@@ -146,13 +153,8 @@ function searchMods() {
 }
 </script>
 
-</div>
-
-<footer>
-© 2026 Noas Beam Hub • Fan Made
-</footer>
-
 </body>
 </html>
+
 
 
