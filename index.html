@@ -1,157 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Noas Beam Hub Mega Mods</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
-
-body {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: radial-gradient(circle at top, #1a001a, #330033);
-    color: white;
-}
-
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(90deg, #ff2fa0, #ff5fd2);
-    box-shadow: 0 0 30px #ff2fa0;
-}
-
-header h1 {
-    font-size: 50px;
-    text-shadow: 0 0 20px #ff2fa0;
-}
-
-header p {
-    opacity: 0.8;
-    font-size: 18px;
-}
-
-#search {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 20px;
-    width: 300px;
-    border-radius: 30px;
-    border: none;
-    font-size: 16px;
-    outline: none;
-}
-
-.container {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.mod {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(255, 47, 160, 0.4);
-    transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.mod:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 40px rgba(255, 47, 160, 0.8);
-}
-
-.mod img {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.mod-content {
-    padding: 15px;
-}
-
-.mod h2 {
-    margin: 0 0 10px;
-    font-size: 18px;
-}
-
-.mod p {
-    font-size: 13px;
-    opacity: 0.8;
-    margin: 5px 0;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #ff2fa0, #ff5fd2);
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.btn:hover {
-    filter: brightness(1.2);
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    font-size: 13px;
-    opacity: 0.6;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Noas Beam Hub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<h1>Noas Beam Hub Mega Mods</h1>
-<p>100 Autos – 5 Bilder pro Auto – Platzhalter für deine Inhalte</p>
-<input type="text" id="search" placeholder="Search Mods..." onkeyup="searchMods()">
+  <h1>Noas Beam Hub</h1>
+  <p>BeamNG Cars & Tracks • Japanese Style</p>
 </header>
 
-<div class="container" id="mods-container"></div>
+<section>
+  <h2>🚗 Cars</h2>
+
+  <!-- TEMPLATE: COPY FOR EVERY CAR -->
+  <div class="mod">
+    <h3>Alfa Romeo SZ</h3>
+    <div class="images">
+      <img src="images/alfa_sz_1.jpg">
+      <img src="images/alfa_sz_2.jpg">
+      <img src="images/alfa_sz_3.jpg">
+    </div>
+    <p class="text1">TEXT HIER BESCHREIBUNG EINFÜGEN</p>
+    <p class="text2">LINK HIER EINFÜGEN</p>
+  </div>
+
+  <div class="mod">
+    <h3>BMW M4 Competition</h3>
+    <div class="images">
+      <img src="images/bmw_m4_1.jpg">
+      <img src="images/bmw_m4_2.jpg">
+      <img src="images/bmw_m4_3.jpg">
+    </div>
+    <p class="text1">TEXT HIER BESCHREIBUNG EINFÜGEN</p>
+    <p class="text2">LINK HIER EINFÜGEN</p>
+  </div>
+
+  <div class="mod"><h3>Lamborghini Huracan</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Lamborghini Aventador</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Lamborghini Urus</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Lamborghini Urus SE</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Alfa Romeo Giulia QV</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Alfa Romeo Stelvio QV</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Audi RS6</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Nissan Skyline R34</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Nissan Skyline R35</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Ferrari Portofino</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Ford Mustang GT</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>McLaren Pack</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>BMW M5</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>BMW M2</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>BMW M3</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Lamborghini Revuelto</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Audi RS4</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Porsche 911 GT3 RS</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Ford Transit</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Segra Ultimate (BEST TRUCK MOD)</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Bugatti Chiron</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Bugatti Veyron</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Rolls Royce Cullinan</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Porsche Cayenne</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Mercedes G-Wagon</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>NIO BP9</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>McLaren Senna</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Dodge Charger</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Ferrari F40</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Alfa Romeo Giulietta</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Alfa Romeo MiTo</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>F4</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>F1 BIG PACK NEW</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+
+</section>
+
+<section>
+  <h2>🛣️ Tracks</h2>
+
+  <div class="mod"><h3>Nürburgring</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Texas</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  <div class="mod"><h3>Drift Playground</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+
+</section>
 
 <footer>
-© 2026 Noas Beam Hub • Fan Made
+  <p>🌸 Noas Beam Hub • Japanese Mod Style</p>
 </footer>
-
-<script>
-// Generiere 100 Autos, 5 Bilder pro Auto
-let container = document.getElementById('mods-container');
-for (let i = 1; i <= 100; i++) {
-    let modHTML = `<div class="mod">`;
-    modHTML += `<h2>Auto ${i}</h2>`;
-    for (let j = 1; j <= 5; j++) {
-        modHTML += `<img src="https://via.placeholder.com/400x200?text=Auto+${i}+Bild+${j}" alt="Auto ${i} Bild ${j}">`;
-        modHTML += `<p>Alfa Romeo SZ</p>`;
-        modHTML += `<a class="btn" href="#" target="_blank">⬇ Download ${j}</a>`;
-    }
-    modHTML += `</div>`;
-    container.innerHTML += modHTML;
-}
-
-// Suchfunktion
-function searchMods() {
-    let input = document.getElementById('search').value.toLowerCase();
-    let mods = document.getElementById('mods-container').getElementsByClassName('mod');
-    for (let i = 0; i < mods.length; i++) {
-        let title = mods[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
-        if (title.includes(input)) {
-            mods[i].style.display = '';
-        } else {
-            mods[i].style.display = 'none';
-        }
-    }
-}
-</script>
 
 </body>
 </html>
