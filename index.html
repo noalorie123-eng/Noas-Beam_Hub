@@ -1,91 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Noas Beam Hub</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Noas Beam Hub</title>
+
+<style>
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #050505, #0e0e0e);
+  color: white;
+}
+header {
+  padding: 50px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff004c, #6a00ff);
+}
+header h1 {
+  font-size: 3.5em;
+  text-shadow: 0 0 25px rgba(255,255,255,.6);
+}
+section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px;
+}
+.mod {
+  background: #111;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 0 30px rgba(255,0,80,.25);
+  transition: transform .3s;
+}
+.mod:hover { transform: scale(1.02); }
+.mod h3 {
+  color: #ff4d7a;
+  margin-bottom: 15px;
+}
+.images {
+  display: flex;
+  gap: 15px;
+}
+.images label {
+  flex: 1;
+  height: 160px;
+  border: 2px dashed #ff004c;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #000;
+  overflow: hidden;
+}
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.text1,.text2 {
+  background: #000;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border-left: 4px solid #6a00ff;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+}
+</style>
 </head>
+
 <body>
 
 <header>
   <h1>Noas Beam Hub</h1>
-  <p>BeamNG Cars & Tracks • Japanese Style</p>
+  <p>BeamNG Mods • Gaming Style</p>
 </header>
 
 <section>
-  <h2>🚗 Cars</h2>
+<h2>🚗 Cars</h2>
 
-  <!-- TEMPLATE: COPY FOR EVERY CAR -->
+<script>
+function preview(input){
+  const img = input.nextElementSibling;
+  const r = new FileReader();
+  r.onload = () => img.src = r.result;
+  r.readAsDataURL(input.files[0]);
+}
+</script>
+
+<!-- TEMPLATE AUTO -->
+<script>
+const cars = [
+"Alfa Romeo SZ","BMW M4 Competition","Lamborghini Huracan","Lamborghini Aventador",
+"Lamborghini Urus","Lamborghini Urus SE","Alfa Romeo Giulia QV","Alfa Romeo Stelvio QV",
+"Audi RS6","Nissan Skyline R34","Nissan Skyline R35","Ferrari Portofino",
+"Ford Mustang GT","McLaren Pack","BMW M5","BMW M2","BMW M3","Lamborghini Revuelto",
+"Audi RS4","Porsche 911 GT3 RS","Ford Transit","Segra Ultimate (BEST TRUCK MOD)",
+"Bugatti Chiron","Bugatti Veyron","Rolls Royce Cullinan","Porsche Cayenne",
+"Mercedes G-Wagon","NIO BP9","McLaren Senna","Dodge Charger","Ferrari F40",
+"Alfa Romeo Giulietta","Alfa Romeo MiTo","F4","F1 BIG PACK NEW"
+];
+
+cars.forEach(car=>{
+  document.write(`
   <div class="mod">
-    <h3>Alfa Romeo SZ</h3>
+    <h3>${car}</h3>
     <div class="images">
-      <img src="images/alfa_sz_1.jpg">
-      <img src="images/alfa_sz_2.jpg">
-      <img src="images/alfa_sz_3.jpg">
+      <label><input type="file" hidden onchange="preview(this)"><img></label>
+      <label><input type="file" hidden onchange="preview(this)"><img></label>
+      <label><input type="file" hidden onchange="preview(this)"><img></label>
     </div>
-    <p class="text1">TEXT HIER BESCHREIBUNG EINFÜGEN</p>
-    <p class="text2">LINK HIER EINFÜGEN</p>
+    <div class="text1">HIER BESCHREIBUNG EINFÜGEN</div>
+    <div class="text2">HIER LINK ODER INFO EINFÜGEN</div>
   </div>
-
-  <div class="mod">
-    <h3>BMW M4 Competition</h3>
-    <div class="images">
-      <img src="images/bmw_m4_1.jpg">
-      <img src="images/bmw_m4_2.jpg">
-      <img src="images/bmw_m4_3.jpg">
-    </div>
-    <p class="text1">TEXT HIER BESCHREIBUNG EINFÜGEN</p>
-    <p class="text2">LINK HIER EINFÜGEN</p>
-  </div>
-
-  <div class="mod"><h3>Lamborghini Huracan</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Lamborghini Aventador</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Lamborghini Urus</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Lamborghini Urus SE</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Alfa Romeo Giulia QV</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Alfa Romeo Stelvio QV</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Audi RS6</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Nissan Skyline R34</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Nissan Skyline R35</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Ferrari Portofino</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Ford Mustang GT</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>McLaren Pack</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>BMW M5</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>BMW M2</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>BMW M3</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Lamborghini Revuelto</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Audi RS4</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Porsche 911 GT3 RS</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Ford Transit</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Segra Ultimate (BEST TRUCK MOD)</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Bugatti Chiron</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Bugatti Veyron</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Rolls Royce Cullinan</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Porsche Cayenne</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Mercedes G-Wagon</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>NIO BP9</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>McLaren Senna</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Dodge Charger</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Ferrari F40</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Alfa Romeo Giulietta</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Alfa Romeo MiTo</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>F4</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>F1 BIG PACK NEW</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-
-</section>
-
-<section>
-  <h2>🛣️ Tracks</h2>
-
-  <div class="mod"><h3>Nürburgring</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Texas</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
-  <div class="mod"><h3>Drift Playground</h3><p class="text1">TEXT</p><p class="text2">LINK</p></div>
+  `);
+});
+</script>
 
 </section>
 
 <footer>
-  <p>🌸 Noas Beam Hub • Japanese Mod Style</p>
+© Noas Beam Hub
 </footer>
 
 </body>
